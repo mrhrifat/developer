@@ -1,0 +1,693 @@
+/*
+    Author: Rakibul Hassan Rifat
+
+*/
+
+/*
+	==========Index=========
+	01) Import Section
+	02)	Variable Section
+	03) Global CSS
+	04) Header Section
+	05) Banner Section
+	06) About Section
+	07) Services Section
+    08) Portfolio Section
+    09) Pages Section
+    10) Blog Section
+    11) Contact Section
+    12) Footer Section
+	========================
+*/
+/*==========01) Import Section Start==========*/
+
+@import url('../css/fonts.css');
+
+/*==========01) Import Section End==========*/
+
+/*==========02) Variable Section Start==========*/
+
+:root {
+	/*=========Color=========*/
+
+	--primary-color: #4458dc;
+	--primary-color2: #854fee;
+	--title-color: #141313;
+	--text-color: #777777;
+	--border-color: #201f1f17;
+	--gradiant-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+	--shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+	--box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+	--roboto: 'Roboto', sans-serif;
+
+	/*=========Font Family==========*/
+
+	/*Roboto- Heading*/
+	--Roboto: 'Roboto', cursive;
+
+	/*Abel -Navbar*/
+	--Abel: 'Abel', cursive;
+
+	/*Josefin_Sans*/
+	--Josefin: 'Josefin', cursive;
+
+	/*Lexend*/
+	--Lexend: 'Lexend', cursive;
+}
+
+/*==========02) Variable Section End==========*/
+
+/*==========03) Global Section Start==========*/
+h1 {
+	font-family: var(--Roboto);
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-family: var(--Josefin);
+	font-size: 2rem;
+}
+
+h3 {
+	font-family: var(--Josefin);
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-family: var(--Lexend);
+	font-size: 1rem;
+}
+
+h5 {
+	font-family: var(--Josefin);
+	font-size: 1rem;
+}
+
+p {
+	font-family: var(--Lexend);
+	font-size: 16px;
+}
+
+span {
+	font-family: var(--Abel);
+}
+
+.nav_fixed {
+	position: fixed;
+	width: 100%;
+	top: -1px;
+	left: 0;
+	right: 0;
+	background: #ffffff;
+	box-shadow: var(--box-shadow);
+	z-index: 999;
+	transition: background 1s ease;
+	padding: 0 1rem;
+}
+
+/*==========03) Global Section End==========*/
+
+/*==========04) Header Section Start==========*/
+header nav a img {
+	width: 60%;
+	padding: 10px;
+}
+
+header #navbarResponsive ul li a {
+	font-family: var(--Lexend);
+	font-size: 15px;
+	padding: 8px;
+	text-transform: uppercase;
+	color: var(--title-color);
+}
+
+header #navbarResponsive ul li a.active {
+	color: var(--primary-color);
+}
+
+header #navbarResponsive ul li a:hover {
+	color: var(--primary-color);
+}
+
+/*==========04) Header Section End==========*/
+
+/*==========05) Banner Section Start==========*/
+
+#banner {
+	background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
+}
+
+#banner .content h3 {
+	padding-top: 20%;
+}
+
+#banner .content h3::after {
+	height: 2px;
+	content: "";
+	width: 18vw;
+	background: var(--title-color);
+	transform: translateY(-10px);
+	margin-left: 5%;
+	display: inline-block;
+}
+
+#banner .content h2 {
+	font-size: 70px;
+	line-height: 0.8;
+}
+
+#banner .content h3,
+h4,
+h2 {
+	line-height: 50px;
+	text-transform: uppercase;
+}
+
+#banner .content h4 {
+	margin-top: 15px;
+}
+
+#banner .banner-img {
+	padding: 112px 0;
+	width: 90rem;
+}
+
+#banner .banner-btn button,
+#about .abt-cnt button {
+	margin: 10px 35px;
+	padding: 5px 20px;
+	font-family: var(--Abel);
+	font-size: 17px;
+	border-radius: 3px;
+	border-color: var(--primary-color);
+}
+
+#banner .banner-btn .btn-primary,
+#about .abt-cnt button {
+	background: var(--gradiant-color);
+	box-shadow: var(--box-shadow);
+}
+
+#banner .banner-btn .btn-primary:hover,
+#about .abt-cnt button:hover {
+	background: whitesmoke;
+	color: var(--title-color);
+	transition: background.6s ease;
+}
+
+#banner .banner-btn .btn-outline-primary {
+	color: var(--title-color);
+}
+
+#banner .banner-btn .btn-outline-primary:hover {
+	background: var(--gradiant-color);
+	transition: background.6s ease;
+	box-shadow: var(--box-shadow);
+	color: whitesmoke;
+}
+
+/*==========05) Banner Section End==========*/
+
+/*==========06) About Section Start==========*/
+#about {
+	padding: 20px 0;
+}
+
+#about .abt-cnt {
+	padding: 10px;
+}
+
+#about .abt-cnt h3 span {
+	display: block;
+	font-weight: bold;
+	letter-spacing: 25px;
+	line-height: 45px;
+	font-size: 40px;
+}
+
+#about .abt-cnt .paragraph {
+	padding-right: 85px;
+}
+
+#about .abt-cnt p {
+	text-align: justify;
+	font-size: small;
+	text-indent: 30px;
+}
+
+/*==========06) About Section End==========*/
+
+/*==========07) Brand Section Start==========*/
+#brand {
+	padding: 30px 90px;
+	margin-bottom: 30px;
+}
+
+#brand .first-row>.brand-row {
+	display: flex;
+	justify-content: center;
+}
+
+#brand .first-row .brand-row>.single-brand {
+	padding: 20px 0;
+	margin: 10px 0;
+	border: 1px solid var(--border-color);
+	transition: transform .6s ease;
+	text-align: center;
+	width: 180px;
+	height: 100px;
+	cursor: pointer;
+}
+
+#brand .first-row .brand-row>.single-brand>img {
+	width: 50%;
+}
+
+#brand .first-row .brand-row>.single-brand:hover {
+	transform: scale(1.1);
+	box-shadow: var(--box-shadow);
+}
+
+#brand .first-row .brand-row>.single-brand:hover>img {
+	filter: brightness(0.15);
+}
+
+
+#brand .experience-area span {
+	display: block;
+}
+
+#brand .experience-area .years-area {
+	background: url(../img/client-info-bg.png)no-repeat 45px 20px;
+	padding: 32px;
+	width: 600px;
+	height: 300px;
+	position: relative;
+	padding-left: 140px;
+}
+
+#brand .experience-area .years-area .years {
+	font-size: 90px;
+	color: var(--primary-color2);
+	z-index: 2;
+}
+
+#brand .experience-area .bg-panel {
+	position: absolute;
+	left: -150px;
+	top: 0;
+	background: #e029290a;
+	width: 400px;
+	height: 400px;
+	margin-left: 340px;
+	z-index: -1;
+}
+
+#brand .experience-area .years-area h2>span {
+	font-family: var(--Abel);
+	font-size: 30px;
+}
+
+#brand .experience-area .call-area {
+	padding-left: 16rem;
+}
+
+/*==========07) Brand Section Start==========*/
+
+/*==========08) Services Section Start==========*/
+#services {
+	padding: 7rem 2rem;
+}
+
+#services .title span {
+	width: 30px;
+	margin: 10px auto;
+	height: 5px;
+	background: var(--title-color);
+	display: block;
+}
+
+#services .services-card .card {
+	border: none;
+	transition: transform .6s ease;
+	background: rgba(248, 252, 253, 0.973);
+}
+
+#services .services-card .card:hover {
+	transform: scale(1.1);
+	box-shadow: var(--box-shadow);
+	cursor: pointer;
+}
+
+#services .services-card .card>img {
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	height: 100px;
+}
+
+#services .services-card .card .card-title {
+	text-align: center;
+}
+
+#services .services-card .card .card-body {
+	padding: 10px;
+	text-align: justify;
+	text-indent: 20px;
+}
+
+/*==========08) Services Section End==========*/
+
+/*==========09) Portfolio Section Start==========*/
+
+#portfolio {
+	padding: 4rem 0;
+	font-family: var(--roboto);
+}
+
+#portfolio .project-title>h5 {
+	font-size: 30px;
+}
+
+#portfolio .button-group .btn:focus,
+.btn:active {
+	outline: none !important;
+	box-shadow: none;
+}
+
+#portfolio .button-group>button {
+	background: transparent;
+	font-size: 16px;
+	line-height: 6;
+	font-family: var(--Josefin);
+}
+
+#portfolio .button-group button+button {
+	padding-left: 3rem;
+}
+
+#portfolio .grid .our-project .img a:hover img {
+	filter: brightness(1.1)drop-shadow(1px 8px 30px #b1afaf);
+}
+
+/*==========09) Portfolio Section End==========*/
+
+/*==========10) About Section Start=========*/
+#about-me {
+	padding: 4rem 0;
+}
+
+#about-me .carousel-items .clients {
+	background: #ffffff10;
+	box-shadow: var(--box-shadow);
+	margin: 3rem 0;
+}
+
+#about-me .carousel-items .clients .client-img img {
+	padding: 2rem;
+}
+
+#about-me .carousel-items .clients .client-say {
+	padding-top: 2rem;
+}
+
+#about-me .carousel-items .clients h5,
+p {
+	font-family: var(--Abel);
+}
+
+#about-me .carousel-items .clients p {
+	font-size: 14px;
+}
+
+#about-me .carousel-items .owl-carousel .owl-items {
+	display: flex;
+	justify-content: center;
+	padding: 01.5rem;
+}
+
+#about-me .carousel-items .owl-carousel .owl-dots .owl-dot.active span {
+	background: var(--primary-color);
+	width: 12px;
+	height: 12px;
+}
+
+/*==========10) About Section End=========*/
+
+/*==========11) Subscribe Section Start=========*/
+
+#subscribe .sbs {
+	background: url(../img/subscribe-bg.png) no-repeat;
+	padding: 10rem 0;
+	margin: 3rem auto;
+}
+
+#subscribe .sbs .title {
+	padding-bottom: 30px;
+	color: whitesmoke;
+}
+
+#subscribe .sbs .input-box input {
+	width: 400px;
+}
+
+#subscribe .sbs .input-box input::placeholer {
+	color: var(--title-color);
+}
+
+#subscribe .sbs button {
+	background: whitesmoke;
+	border: none;
+	color: var(--title-color);
+	padding: 7px 20px;
+}
+
+#subscribe .sbs button:hover {
+	box-shadow: var(--box-shadow)
+}
+
+/*==========11) Subscribe Section End=========*/
+
+/*==========12) Footer Section Start==========*/
+#footer {
+	padding: 5rem 0;
+	background: url(../img/footer-bg.png)no-repeat 40% 0%;
+}
+
+#footer .social h5 {
+	font-family: var(--roboto);
+	text-transform: uppercase;
+}
+
+#footer .social a {
+	font-size: 25px;
+	padding: 2rem;
+	color: var(--border-color);
+}
+
+#footer .social a:hover {
+	color: var(--primary-color);
+}
+
+#footer .copyright p {
+	padding: 15px 0;
+	font-family: var(--roboto);
+}
+
+/*==========12) Footer Section End==========*/
+
+
+/*==========Media Query Start==========*/
+@media(max-width: 1191px) {
+	#services .card .card-title h4 {
+		font-size: 22px;
+		line-height: 50px;
+	}
+
+	#services .card .card-body p {
+		font-size: small;
+	}
+
+	#subscribe .sbs .input-box input {
+		width: 100%;
+	}
+
+	#services .services-card .card {
+		margin-bottom: 20px;
+	}
+}
+
+@media(max-width: 991px) {
+	#banner .content h3 {
+		padding-top: 15%;
+	}
+
+	#services .services-card .card {
+		width: 85%;
+	}
+
+}
+
+@media (max-width: 767px) {
+	#services .services-card .card {
+		width: 100%;
+	}
+
+	#portfolio .button-group>button {
+		font: normal 500 14px/40px var(--roboto);
+	}
+
+	#portfolio .button-group button+button {
+		padding: 7px;
+	}
+
+	#subscribe .form-box {
+		margin: 0 auto;
+	}
+
+	#subscribe .form-box .submit {
+		margin-top: 10px;
+	}
+
+	#subscribe .sbs .input-box input {
+		width: 250px;
+	}
+}
+
+@media(max-width: 575px) {
+	#services .services-card .card {
+		width: 65%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+
+	#brand .experience-area .call-area {
+		padding-left: 12rem;
+	}
+}
+
+@media (max-width:420px) {
+	#services .services-card .card {
+		width: 100%;
+	}
+
+	#banner .banner-btn button,
+	#about .abt-cnt button {
+		margin: 10px 20px;
+	}
+
+	#about .abt-cnt h3 span {
+		letter-spacing: 0px;
+	}
+
+	#about .abt-cnt .paragraph {
+		padding: 5px 15px;
+	}
+
+	#brand {
+		padding: 30px 0px;
+	}
+
+	#brand .experience-area .years-area {
+		background: url(../img/client-info-bg.png)no-repeat 0px 20px;
+		padding-left: 0;
+	}
+
+	#brand .experience-area .call-area {
+		padding-left: 0rem;
+		margin-left: 25px;
+	}
+
+	#brand .experience-area .bg-panel {
+		margin-left: 100px;
+	}
+
+	#services .title h2,
+	#about-me .title h2,
+	#subscribe .title h2 {
+		font-size: 25px;
+	}
+
+	#services .title p,
+	#about-me .title p,
+	#subscribe .title p {
+		width: 100% !important;
+	}
+
+	#portfolio .project-title>h5 {
+		font-size: 25px;
+	}
+
+	#subscribe .sbs {
+		padding: 3rem 0;
+	}
+
+	#services .title p {
+		padding: 10px;
+	}
+
+	#footer .social a {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	#banner .content h2 {
+		font-size: 50px;
+	}
+}
+
+@media(max-width: 340px) {
+	#banner .content h2 {
+		font-size: 50px;
+	}
+
+	header .navbar a {
+		margin: 0;
+	}
+
+	#banner .content h4 {
+		line-height: 2;
+		font-size: 20px;
+	}
+}
+
+@media(max-width: 300px) {
+	header .navbar-brand {
+		text-align: center;
+	}
+
+	header .navbar-toggler {
+		margin: 0 auto;
+	}
+}
+
+@media(max-width: 270px) {
+
+	/*header .navbar a{
+		width: 60%;
+	}*/
+	header .navbar-toggler {
+		border: none;
+	}
+
+	#about .abt-cnt h3>span {
+		font-size: 30px;
+	}
+
+	#brand .years-area h3 {
+		padding: 0 !important;
+		font-size: 50px !important;
+	}
+
+	#services .services-card .card {
+		width: 100%;
+	}
+
+	#subscribe .sbs .input-box input {
+		width: 215px;
+	}
+}
+
+/*==========Media Query End==========*/
